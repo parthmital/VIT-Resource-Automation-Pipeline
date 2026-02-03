@@ -44,7 +44,7 @@ No human-in-the-loop. No repetitive clicks. No manual sorting.
 
 Each tool is usable independently but is designed to form a **sequential pipeline**.
 
-## 1 VTOP Scraper
+## 1. VTOP Scraper
 
 ### Purpose
 
@@ -68,7 +68,7 @@ Automates downloading **all faculty materials** for a selected subject from the 
 - Requires **manual login**
 - Chrome browser automation via Selenium
 
-## 2 UniBud Scraper
+## 2. UniBud Scraper
 
 ### Purpose
 
@@ -89,7 +89,7 @@ Automates downloading **all Previous Year Questions (PYQs)** for a subject from 
 - Persists login state across sessions
 - Requires one-time manual login
 
-## 3 Folder Details Tool
+## 3. Folder Details Tool
 
 ### Purpose
 
@@ -119,7 +119,7 @@ This allows objective ranking (e.g., top 5 faculties by material depth).
 Folder_Details.csv
 ```
 
-## 4 PDF Converter
+## 4. PDF Converter
 
 ### Purpose
 
