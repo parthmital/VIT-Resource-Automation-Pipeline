@@ -4,7 +4,7 @@ An end-to-end academic automation toolkit designed for VIT students to **collect
 
 This project combines four independent but tightly integrated utilities into a single, coherent workflow that replaces weeks of repetitive manual work with a few hours of automated processing.
 
-## 📌 Problem Context
+## Problem Context
 
 At VIT, academic resources are fragmented across multiple platforms:
 
@@ -21,7 +21,7 @@ Manually:
 
 …takes **several weeks per semester**.
 
-## 🎯 What This Project Does
+## What This Project Does
 
 **VTOP Scholar Pipeline** automates the _entire academic resource lifecycle_:
 
@@ -33,7 +33,7 @@ Manually:
 
 No human-in-the-loop. No repetitive clicks. No manual sorting.
 
-## 🧩 Included Mini Projects
+## Included Mini Projects
 
 | Tool               | Purpose                                                            |
 | ------------------ | ------------------------------------------------------------------ |
@@ -44,7 +44,7 @@ No human-in-the-loop. No repetitive clicks. No manual sorting.
 
 Each tool is usable independently but is designed to form a **sequential pipeline**.
 
-## 1️⃣ VTOP Scraper
+## 1 VTOP Scraper
 
 ### Purpose
 
@@ -68,7 +68,7 @@ Automates downloading **all faculty materials** for a selected subject from the 
 - Requires **manual login**
 - Chrome browser automation via Selenium
 
-## 2️⃣ UniBud Scraper
+## 2 UniBud Scraper
 
 ### Purpose
 
@@ -89,7 +89,7 @@ Automates downloading **all Previous Year Questions (PYQs)** for a subject from 
 - Persists login state across sessions
 - Requires one-time manual login
 
-## 3️⃣ Folder Details Tool
+## 3 Folder Details Tool
 
 ### Purpose
 
@@ -119,7 +119,7 @@ This allows objective ranking (e.g., top 5 faculties by material depth).
 Folder_Details.csv
 ```
 
-## 4️⃣ PDF Converter
+## 4 PDF Converter
 
 ### Purpose
 
@@ -136,7 +136,7 @@ Standardizes all documents into **PDF format**.
 - Uses Microsoft Office COM automation
 - Optionally deletes original files after conversion
 
-## 🖥️ System Requirements
+## System Requirements
 
 ### Operating System
 
@@ -157,7 +157,7 @@ Standardizes all documents into **PDF format**.
 - `pywin32`
 - `comtypes`
 
-## ⚠️ Important Notes
+## Important Notes
 
 - VTOP Scraper supports **only the old course page**, not the consolidated version
 - Login is **manual** for both VTOP and UniBud
@@ -165,7 +165,7 @@ Standardizes all documents into **PDF format**.
 - UniBud and VTOP automation depends on current site structure
 - Original files may be deleted during PDF conversion if enabled
 
-## 🧠 Design Philosophy
+## Design Philosophy
 
 - **Automation over interaction**
 - **Quantitative filtering over subjective browsing**
@@ -174,7 +174,7 @@ Standardizes all documents into **PDF format**.
 
 The pipeline is optimized for **scale**: more subjects do not increase effort.
 
-## 🔒 Usage Disclaimer
+## Usage Disclaimer
 
 This project is intended for **personal academic use**.  
 Users are responsible for complying with institutional policies and platform terms of service.

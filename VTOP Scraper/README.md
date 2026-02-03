@@ -2,20 +2,7 @@
 
 A Python-based web automation tool for downloading course materials from VIT University's VTOP portal. This scraper automates the process of downloading lecture materials (ZIP files) for all faculty members associated with a course, organizing them by subject and faculty name.
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [How It Works](#how-it-works)
-- [Project Structure](#project-structure)
-- [Important Notes](#important-notes)
-- [Troubleshooting](#troubleshooting)
-
-## 🎯 Overview
+## Overview
 
 VTOP Scraper is designed to automate the tedious process of downloading course materials from VIT University's VTOP portal. Instead of manually clicking through each faculty member's page to download materials, this script:
 
@@ -24,7 +11,7 @@ VTOP Scraper is designed to automate the tedious process of downloading course m
 - Organizes downloads into subject-specific folders
 - Names files with faculty name and slot information for easy identification
 
-## ✨ Features
+## Features
 
 - **Automated Download**: Automatically downloads materials for all faculty members in a course
 - **Smart Organization**: Creates subject-specific folders (e.g., "CS2001 Data Structures")
@@ -34,7 +21,7 @@ VTOP Scraper is designed to automate the tedious process of downloading course m
 - **Error Handling**: Robust error handling for timeouts and stale element references
 - **Interactive Mode**: Supports processing multiple subjects in a single session
 
-## 📦 Requirements
+## Requirements
 
 ### Software Dependencies
 
@@ -51,7 +38,7 @@ VTOP Scraper is designed to automate the tedious process of downloading course m
 - `os` - Operating system interface (built-in)
 - `time` - Time-related functions (built-in)
 
-## 🔧 Installation
+## Installation
 
 1. **Clone or download this repository**
 
@@ -66,7 +53,7 @@ VTOP Scraper is designed to automate the tedious process of downloading course m
    - Ensure it matches your Chrome browser version
    - Alternatively, Selenium 4.6+ includes Selenium Manager which automatically handles ChromeDriver
 
-## ⚙️ Configuration
+## Configuration
 
 Before running the script, you may want to configure the following constants in `VTOP_Scraper.py`:
 
@@ -97,7 +84,7 @@ DOWNLOAD_TIMEOUT = 120  # Seconds to wait for file download
 ZIP_EXT = ".zip"  # Expected file extension for downloads
 ```
 
-## 🚀 Usage
+## Usage
 
 1. **Run the script**:
 
@@ -106,13 +93,11 @@ ZIP_EXT = ".zip"  # Expected file extension for downloads
    ```
 
 2. **Login to VTOP**:
-
    - The script will open Chrome browser
    - Navigate to VTOP and log in manually
    - Open the desired subject/course page where the faculty table is visible
 
 3. **Start scraping**:
-
    - Return to the terminal/command prompt
    - Press `Enter` to begin the automated download process
 
@@ -122,22 +107,19 @@ ZIP_EXT = ".zip"  # Expected file extension for downloads
      - Open another subject and process it (press `Enter`)
      - Quit the program (type `q`)
 
-## 🔍 How It Works
+## How It Works
 
 ### Workflow
 
 1. **Initialization**:
-
    - Sets up Chrome WebDriver with configured options
    - Configures download preferences
 
 2. **Subject Detection**:
-
    - Extracts course code and title from the faculty table
    - Creates a subject-specific folder (e.g., "CS2001 Data Structures")
 
 3. **Faculty Processing**:
-
    - Iterates through each faculty row in the table
    - For each faculty:
      - Clicks the "View" button to open faculty details
@@ -160,35 +142,7 @@ ZIP_EXT = ".zip"  # Expected file extension for downloads
 - `normalize_slot()`: Processes slot information (handles multiple slots)
 - `process_all_faculties()`: Main processing loop for all faculty members
 
-## 📁 Project Structure
-
-```
-VTOP-Scraper/
-│
-├── VTOP_Scraper.py    # Main script file
-└── README.md          # This file
-```
-
-### Download Structure
-
-After running the script, your download directory will be organized as:
-
-```
-D:\Downloads\
-│
-├── CS2001 Data Structures\
-│   ├── Dr. John Doe A1.zip
-│   ├── Prof. Jane Smith B2.zip
-│   └── Dr. Bob Wilson C3.zip
-│
-├── CS2002 Algorithms\
-│   ├── Dr. Alice Brown A1.zip
-│   └── Prof. Charlie Davis B2.zip
-│
-└── ...
-```
-
-## ⚠️ Important Notes
+## Important Notes
 
 1. **Authentication**: You must manually log in to VTOP before starting the scraper. The script does not handle authentication automatically.
 
@@ -204,7 +158,7 @@ D:\Downloads\
 
 7. **File Conflicts**: If a file with the same name already exists, the script will append a counter (e.g., `_1`, `_2`) to avoid overwriting.
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Issue: ChromeDriver not found
 
@@ -250,25 +204,3 @@ D:\Downloads\
 - The script uses JavaScript clicks as fallback
 - If issues persist, VTOP's page structure may have changed
 - Check browser console for JavaScript errors
-
-## 📝 License
-
-This project is provided as-is for educational and personal use. Please respect VIT University's terms of service and use responsibly.
-
-## 🤝 Contributing
-
-Feel free to submit issues, fork the repository, and create pull requests for any improvements.
-
-## ⚡ Tips for Best Results
-
-1. **Use Chrome Profile**: Configure `CHROME_USER_DATA_DIR` and `CHROME_PROFILE_DIR` to use your existing Chrome profile with saved VTOP login credentials.
-
-2. **Batch Processing**: Process multiple subjects in one session to save time.
-
-3. **Monitor Downloads**: Keep an eye on the terminal output to track progress and identify any issues early.
-
-4. **Backup**: Regularly backup downloaded materials as they may not be available on VTOP indefinitely.
-
----
-
-**Note**: This tool is for personal use only. Ensure compliance with VIT University's policies and terms of service when using this scraper.
